@@ -1,13 +1,13 @@
-var profileCard = new Vue({
-  el: '#userProfileCard',
+var libraryApp = new Vue({
+  el: '#userLibraryApp',
   data: {
     users: []
   },
   methods: {
     fetchUsers() {
-      fetch('https://randomuser.me/api/')
+      fetch('randomuser.me-sample.json')
       .then( response => response.json() )
-      .then( json => {profileCard.users = json})
+      .then( json => {libraryApp.user = json})
       ;
 
       // Means the same at this

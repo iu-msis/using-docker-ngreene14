@@ -23,17 +23,20 @@
 <!--W3 school profile card-->
 <div class="card">
 <div class="container1">
-      <div id="userProfileCard" class="col-md-4 queueView">
-        <div class="userProfile user"
-        v-for="user in users">
-          <span class="userName">{{ user.lastName }}</span>
-          <span class="userName">{{ user.firstName }}</span><br>
-        </div>
+  <div id="userLibraryApp" class="col-md-4 queueView">
+      <div class="userLibrary user"
+      :class="patient.priority +'Priority'"
+       v-for="user in users">
+        arrival time<br>
+        <span class="patientName">{{ user.results.name }}</span>
+        <span class="patientName">{{ patient.firstName }}</span><br>
+        <span>{{ patient.sexAtBirth }}</span>
+        <span>{{ patient.dob }}</span>
       </div>
     </div>
   </div>
-
 </div>
+
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/random.user.js"></script>
 </body>
