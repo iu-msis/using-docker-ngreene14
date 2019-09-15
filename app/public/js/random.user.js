@@ -1,21 +1,19 @@
-var libraryApp = new Vue({
-  el: '#userLibraryApp',
+var userApp = new Vue({
+  el: '#userRandomApp',
   data: {
-    users: []
-  },
-  methods: {
-    fetchUsers() {
-      fetch('https://randomuser.me/api/')
-      .then( response => response.json() )
-      .then( json => {libraryApp.user = json;});
-
-
-      // Means the same at this
-      // fetch('https://randomuser.me/api/')
-      // .then(function(response) {return response.json()})
-      // .then(function(json) {waitingApp.people = json});
+    person:  [
+    {
 
     }
+  ]
+},
+  methods: {
+      fetchUsers() {
+          fetch('https://randomuser.me/api/')
+          .then( response => response.json() )
+          .then( json => {userApp.person = json.results[0];})
+          ;
+      }
   },
   created() {
     this.fetchUsers();

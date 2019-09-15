@@ -12,7 +12,7 @@
       <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="books.html">Book Information</a>
+      <a class="nav-link" href="table.html">Book Information</a>
     </li>
     <li class="nav-item active">
       <a class="nav-link" href="user.html">User Profile</a>
@@ -21,17 +21,21 @@
 </nav>
 <br>
 <!--W3 school profile card-->
-<div class="card">
-<div class="container1">
-  <div id="libraryApp" class="col-md-4 queueView">
-      <div class="user libraryApp"
-       v-for="user in users">
-        <span class="userName">{{ user.name.first }}</span>
-        <span class="userName">{{ user.name.last }}</span><br>
+<div id="container">
+    <div class="row">
+      <div id="userRandomApp">
+        <div>
+          <a v-bind:href="person.picture.large">
+          <img class="img-fluid img-thumbnail" v-bind:src="person.picture.medium" id="UserImg"></a>
+          <p>First Name: <span>{{person.name.first}}</span></p>
+          <p>Last Name: <span>{{person.name.last}}</span></p>
+          <p>Birth Date: <span>{{person.dob.date}}</span></p>
+          <p>Age: <span>{{person.dob.age}}</span></p>
+          <p>Country: <span>{{person.nat}}</span></p>
+          <p>Email:<a v-bind:href="'mailto:'+person.email" target="_blank"> {{person.email}}</a></p>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script src="js/random.user.js"></script>
