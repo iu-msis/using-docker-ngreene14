@@ -1,5 +1,5 @@
 /*user profile*/
-.container {
+.userRandomApp {
   max-width: 300px;
   margin: auto;
   text-align: center;
@@ -9,7 +9,7 @@
   outline-color: RGB(120,135,246);
 }
 
-#UserImgimg {
+#UserImg {
   display: block;
   margin-left: auto;
   margin-right: auto;
