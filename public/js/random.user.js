@@ -5,7 +5,7 @@ var libraryApp = new Vue({
   },
   methods: {
     fetchUsers() {
-      fetch('randomuser.me-sample.json')
+      fetch('https://randomuser.me/api/')
       .then( response => response.json() )
       .then( json => {libraryApp.user = json})
       ;
