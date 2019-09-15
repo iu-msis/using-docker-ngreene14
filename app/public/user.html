@@ -26,11 +26,8 @@
   <div id="libraryApp" class="col-md-4 queueView">
       <div class="user libraryApp"
        v-for="user in users">
-        arrival time<br>
-        <span class="patientName">{{ results.name }}</span>
-        <span class="patientName">{{ patient.firstName }}</span><br>
-        <span>{{ patient.sexAtBirth }}</span>
-        <span>{{ patient.dob }}</span>
+        <span class="userName">{{ user.name.first }}</span>
+        <span class="userName">{{ user.name.last }}</span><br>
       </div>
     </div>
   </div>

@@ -7,8 +7,8 @@ var libraryApp = new Vue({
     fetchUsers() {
       fetch('https://randomuser.me/api/')
       .then( response => response.json() )
-      .then( json => {libraryApp.user = json})
-      ;
+      .then( json => {libraryApp.user = json;});
+
 
       // Means the same at this
       // fetch('https://randomuser.me/api/')
