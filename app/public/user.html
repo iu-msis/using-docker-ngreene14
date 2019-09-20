@@ -20,7 +20,7 @@
   </ul>
 </nav>
 <br>
-<!--worked with Grace Liu and Bhasi Mehta-->
+<!--worked with Grace Liu-->
 <div class="container">
     <div class="row">
       <div id="userRandomApp">
@@ -33,6 +33,13 @@
           <p>Age: <span>{{person.dob.age}}</span></p>
           <p>Country: <span>{{person.nat}}</span></p>
           <p>Email:<a v-bind:href="'mailto:'+person.email" target="_blank"> {{person.email}}</a></p>
+          <form @submit.prevent="fetchUsers">
+          <div class="form-group row">
+            <div class="col-sm-10">
+              <button type="submit" class="btn">Refresh</button>
+            </div>
+          </div>
+        </form>
         </div>
       </div>
     </div>
